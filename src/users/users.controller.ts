@@ -5,9 +5,11 @@ import { ApiBadRequestResponse, ApiConflictResponse, ApiCreatedResponse } from '
 import {UserDTO} from './users.dto';
 import e from 'express';
 
+const CSS_URL = "https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/4.1.0/swagger-ui.min.css";
+swaggerUI.setup(specs, { customCssUrl: CSS_URL })
+
 @Controller('users')
 @ApiTags('users')
-
 
 export class UsersController {
   constructor(private readonly usersService: UsersService) {}
