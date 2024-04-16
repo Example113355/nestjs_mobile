@@ -68,7 +68,6 @@ export class UsersController {
     },
   }})
   getUserById(@Param('id') id: number){
-    console.log(id)
     return this.usersService.getUserById(id);
   }
 
@@ -104,7 +103,6 @@ export class UsersController {
     },
    }})
   addUser(@Body() user: UserDTO) {
-    console.log(user)
     return this.usersService.createUser(user);
   }
 
